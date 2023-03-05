@@ -43,38 +43,5 @@
 
 **注**：由于 GitHub Actions 的限制，如果设置为 `* * * * *` 实际的执行频率为每 5 分执行一次。
 
-## License
-
-[auto-green](https://github.com/AndersonHJB/AutoGreen) is released under the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
-
-
-
-![公众号：AI悦创.jpg](README.assets/公众号：AI悦创.jpg)
-
-
-```
-name: ci
-
-on:
-  push:
-    branches:
-      - master
-  schedule:
-    - cron: "* */78 * * *"
-
-jobs:
-  autogreen:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v2
-
-      - name: Auto green
-        run: |
-          git config --local user.email "cleland1432803776@icloud.com"
-          git config --local user.name "AndersonHJB"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git pull --rebase
-          git commit --allow-empty -m "a commit a day keeps your girlfriend away"
-          git push
-```
+# error
+https://blog.csdn.net/qq_44275213/article/details/128857688
