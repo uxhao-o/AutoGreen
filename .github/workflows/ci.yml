@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Auto green
         run: |
-          git config --local user.email "cleland1432803776@icloud.com"
-          git config --local user.name "AndersonHJB"
+          git config --local user.email "uxhao_o@163.com"
+          git config --local user.name "uxhaoo"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "a commit a day keeps your girlfriend away"
